@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fancy Clothing Store</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+  <header>
+    <h1>FANCY CLOTHING STORE</h1>
+  </header>
+  <main class="container">
+    <!-- Product Listing Section -->
+    <div class="product-listing">
+      <div class="product-card">
+        <a href="https://ibb.co/D8xvMsX"><img src="https://i.ibb.co/0Fg698N/t-shirt.jpg" alt="t-shirt"
+            border="0"></a><!--add t-shirt image link from ibby.co site-->
+        <h3>T-Shirt</h3>
+        <p>$20</p>
+        <button onclick="addToCart('T-Shirt', 20)">Add to Cart</button>
+      </div>
+      <div class="product-card">
+        <a href="https://ibb.co/JyhmLvQ"><img src="https://i.ibb.co/k9d5n41/jeans.webp" alt="jeans" border="0"></a>
+        <!--add jeans image link from ibby.co site-->
+        <h3>Jeans</h3>
+        <p>$40</p>
+        <button onclick="addToCart('Jeans', 40)">Add to Cart</button>
+      </div>
+      <div class="product-card">
+        <a href="https://imgbb.com/"><img src="https://i.ibb.co/Y8qLxJc/jacket.webp" alt="jacket"
+            border="0"></a><!--add jacket image link from ibby.co site-->
+        <h3>Jacket</h3>
+        <p>$60</p>
+        <button onclick="addToCart('Jacket', 60)">Add to Cart</button>
+      </div>
+    </div>
+
+    <!-- Order Summary Section -->
+    <div class="order-summary">
+      <h2>Customer Details</h2>
+      <form id="customer-details">
+        <input type="text" id="fullName" placeholder="Full Name" required>
+        <input type="email" id="email" placeholder="Email" required>
+        <input type="text" id="address" placeholder="Delivery Address" required>
+        <input type="tel" id="phone" placeholder="Phone Number" required>
+      </form>
+
+      <h2>Order Summary</h2>
+      <div id="cart-summary">
+        <!-- JavaScript will dynamically update this section -->
+      </div>
+      <button class="checkout-btn" onclick="proceedToCheckout()">Proceed to Payment</button>
+    </div>
+  </main>
+
+  <script src="shopping.js"></script>
+</body>
+
+</html>
